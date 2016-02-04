@@ -1,0 +1,48 @@
+img {
+  height: 300px;
+  margin: 0 auto;
+}
+#wrapper {
+  background-color: black;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.container {
+  border: 1px solid grey;
+  width: 300px;
+  height: 300px;
+
+  perspective: 500px;
+}
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.2s;
+}
+.card .front {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: grey;
+  z-index: 2;
+  width: 300px;
+  height: 300px;
+}
+.card .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: grey;
+  transform: rotateY(180deg);
+  z-index: 1;
+  width: 300px;
+  height: 300px;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
